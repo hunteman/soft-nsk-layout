@@ -1,0 +1,9 @@
+.input {
+    &-error {
+        color: $accentColor;
+    }
+    &-textarea {
+        width: 100%;
+        outline: none;
+    }
+}

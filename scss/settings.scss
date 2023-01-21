@@ -1,0 +1,73 @@
+$maxWidth:  1920;
+
+$sbreak_xl: 1170;
+$sbreak_lg_end: 1169;
+$sbreak_lg: 992;
+$sbreak_md_end: 991;
+$sbreak_md: 768;
+$sbreak_sm_end: 767;
+$sbreak_sm: 576;
+$sbreak_xs_end: 575;
+
+@mixin adaptiv-font($pcSize, $mobSize) {
+  $addSize: $pcSize - $mobSize;
+  $maxWidth: $maxWidth - 320;
+  font-size: calc(#{$mobSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidth}));
+}
+
+@mixin resp($min, $max) {
+    @media screen and (min-width: ($min + 'px')) and (max-width: ($max + 'px')) {
+        @content
+    }
+}
+
+
+
+*, *::after, *::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul {
+    list-style-type: "\002D";
+    padding-left: 13px;
+
+    li {
+        padding: 3px;
+        padding-left: 5px;
+    }
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+body {
+    font-family: 'Lato';
+    font-weight: normal;
+    line-height: 1.25;
+    color: $textColor;
+}
+
+.container {
+    width: 100%;
+    max-width: 1230px;
+    margin: 0 auto;
+    padding: 0 30px;
+
+    @include resp(0, $sbreak_xs_end) {
+        padding: 15px;
+    }
+}
+
+.title-h1 {
+    font-weight: 700;
+    text-transform: uppercase;
+    @include adaptiv-font(48, 24);
+}
+
+.highlight {
+    color: $accentColor;
+}

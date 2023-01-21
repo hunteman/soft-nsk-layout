@@ -4,3 +4,8 @@
 ```
 npm install
 ```
+
+## Project start
+```
+gulp
+```

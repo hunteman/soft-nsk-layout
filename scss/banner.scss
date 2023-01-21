@@ -1,0 +1,41 @@
+.banner {
+    position: relative;
+    width: 100%;
+    padding-top: 45%;
+    background: $light-dark-bg url('/assets/img/banner-image.jpg') center no-repeat;
+    background-size: cover;
+
+    &__container {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        display: grid;
+        align-items: center;
+    }
+
+    &__content {
+        color: #000;
+        max-width: 800px;
+
+        ul {
+            margin-top: 5px;
+        }
+    }
+
+    &__title {
+        margin: calc(26px + 46 * ((100vw - 320px) / (1920 - 320))) 0;
+    }
+
+    &__text {
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 6;
+        overflow: hidden;
+    }
+
+    @include resp(0, $sbreak_xs_end) {
+        padding-top: 140%;
+    }
+}

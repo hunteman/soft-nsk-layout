@@ -1,0 +1,29 @@
+{
+  "name": "soft-nsk-layout",
+  "version": "1.0.0",
+  "description": "## Project setup ``` npm install ```",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hunteman/soft-nsk-layout.git"
+  },
+  "author": "Dmitry Gorodetsky",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hunteman/soft-nsk-layout/issues"
+  },
+  "homepage": "https://github.com/hunteman/soft-nsk-layout#readme",
+  "dependencies": {
+    "gulp": "^4.0.2",
+    "gulp-rename": "^2.0.0"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.27.11",
+    "gulp-sass": "^5.1.0",
+    "gulp-uglify-es": "^3.0.0",
+    "sass": "^1.57.1"
+  }
+}

@@ -15,8 +15,8 @@ function openMenu() {
     const menu = document.querySelector('.header__nav');
 
     burger && burger.addEventListener('click', function() {
-        this.classList.toggle('_open-menu');
-        menu.classList.toggle('_open-menu');
+        this.classList.toggle('_open_menu');
+        menu.classList.toggle('_open_menu');
     })
 }
 

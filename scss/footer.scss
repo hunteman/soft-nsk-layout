@@ -1,0 +1,123 @@
+.footer {
+    margin-top: auto;
+    background-color: $light-dark-bg;
+
+    &__container {
+        min-height: 80px;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &__sources {
+        display: flex;
+        flex-wrap: wrap;
+        margin-left: 40px;
+        font-size: 13px;
+        border-left: 1px solid #C3C3C3;
+
+        &__wrapper {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        &:first-child {
+            color: #C3C3C3;
+        }
+    }
+
+    &__link {
+        display: flex;
+        align-items: center;
+        padding-left: 40px;
+
+        .icon {
+            display: inline-block;
+            width: 22px;
+            height: 22px;
+            max-height: 1.2rem;
+            margin-right: 10px;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: contain;
+
+            &_qiwi {
+                background-image: url('/assets/img/icons/qiwi.svg');
+            }
+            &_ya {
+                background-image: url('/assets/img/icons/ya.svg');
+                margin-bottom: 4px;
+            }
+            &_wm {
+                background-image: url('/assets/img/icons/wm.svg');
+            }
+            &_mail {
+                background-image: url('/assets/img/icons/mail.svg');
+            }
+            &_vk {
+                background-image: url('/assets/img/icons/vk.svg');
+            }
+        }
+    }
+
+    .copyright {
+        font-size: 13px;
+    }
+
+    @include resp(1280, 9999) {
+        &__sources__wrapper {
+            order: 2;
+        }
+    }
+
+    @include resp(0, 1279) {
+        &__sources__wrapper {
+            width: 100%;
+        }
+
+        &__link {
+            padding-left: 0;
+            padding-right: 30px;
+        }
+
+        &__sources {
+            margin: 1rem 0;
+            border: none;
+
+            &:first-child {
+                margin-right: 30px;
+                border-right: 1px solid #C3C3C3;
+            }
+        }
+
+        &__container {
+            padding-top: 10px;
+            padding-bottom: 10px;
+        }
+
+        .copyright {
+            margin: 1rem 0;
+        }
+    }
+
+    @include resp(0, 830) {
+        &__sources {
+            flex-direction: column;
+        }
+
+        &__link {
+            &:not(:first-child) {
+                margin-top: 12px;
+            }
+        }
+    }
+
+    @include resp(0, 385) {
+        &__sources {
+            &:first-child {
+                border: none;
+            }
+        }
+    }
+}

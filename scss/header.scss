@@ -36,7 +36,7 @@
             -ms-transition: .3s;
             -o-transition: .3s;
 
-            &:hover, &.active {
+            &.active {
                 color: $accentColor;
             }
         } 
@@ -63,7 +63,7 @@
             -ms-transition: transform .3s cubic-bezier(0.405,0.005,0,1) .4s,visibility .3s cubic-bezier(0.405,0.005,0,1) .4s;
             -o-transition: transform .3s cubic-bezier(0.405,0.005,0,1) .4s,visibility .3s cubic-bezier(0.405,0.005,0,1) .4s;
 
-            &._open-menu {
+            &._open_menu {
                 visibility: visible;
                 -webkit-transform: translateX(0);
                 transform: translateX(0);

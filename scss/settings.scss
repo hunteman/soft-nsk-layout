@@ -29,13 +29,12 @@ $sbreak_xs_end: 575;
 }
 
 ul {
-    list-style-type: "\002D";
-    padding-left: 13px;
+    list-style-type: none;
+}
 
-    li {
-        padding: 3px;
-        padding-left: 5px;
-    }
+img {
+    max-width: 100%;
+    height: auto;
 }
 
 a {
@@ -80,15 +79,12 @@ body {
 }
 
 .title-h2 {
-    font-weight: 700;
+    font-weight: 800;
     text-transform: uppercase;
-    @include adaptiv-font(48, 24);
+    @include adaptiv-font(36, 22);
 }
 
 .highlight {
     color: $accentColor;
 }
 
-.copyright {
-        
-}

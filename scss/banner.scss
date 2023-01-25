@@ -1,5 +1,6 @@
 .banner {
     position: relative;
+    overflow: hidden;
     width: 100%;
     padding-top: 45%;
     background: $light-dark-bg url('/assets/img/banner-image.jpg') center no-repeat;
@@ -20,7 +21,14 @@
         max-width: 800px;
 
         ul {
+            list-style-type: "\002D";
+            padding-left: 13px;
             margin-top: 5px;
+        
+            li {
+                padding: 3px;
+                padding-left: 5px;
+            }
         }
     }
 
@@ -35,7 +43,38 @@
         overflow: hidden;
     }
 
+    &__actions {
+        margin-top: calc(26px + 46 * ((100vw - 320px) / (1920 - 320)));
+
+        .button {
+            margin-right: 30px;
+            margin-bottom: 1rem;
+        }
+    }
+
+    @include resp($sbreak_md, $sbreak_lg_end) {
+        padding-top: 70%;
+    }
+
+    @include resp($sbreak_sm, $sbreak_sm_end) {
+        padding-top: 100%;
+    }
+
     @include resp(0, $sbreak_xs_end) {
         padding-top: 140%;
+
+        &__actions {
+            .button {
+                width: 100%;
+            }
+        }
+    }
+
+    @include resp(0, 380) {
+        padding-top: 170%;
+
+        &__content {
+            padding-top: 50px;
+        }
     }
 }

@@ -1,0 +1,171 @@
+.booking {
+    background: #272733 url('/assets/img/icons/booking/booking-bg.jpg') center no-repeat;
+    background-size: cover;
+    padding: 90px 0;
+
+    &__title {
+        margin: 30px 0;
+        text-align: center;
+    }
+
+    &__subtitle {
+        text-align: center;
+    }
+
+    &__steps {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        list-style-type: none;
+        padding: 80px 0;
+    }
+
+    &__step {
+        position: relative;
+        width: 20%;
+        min-width: 232px;
+        text-align: center;
+        padding: 10px 20px;
+
+        & + .booking__step {
+            &::before {
+                content: url('/assets/img/icons/booking/booking-line.svg');
+                position: absolute;
+                top: 46px;
+                left: 0;
+                transform: translateX(-50%);
+                -webkit-transform: translateX(-50%);
+                -moz-transform: translateX(-50%);
+                -ms-transform: translateX(-50%);
+                -o-transform: translateX(-50%);
+            }
+        } 
+
+        img {
+            width: 100px;
+            height: 100px;
+            object-fit: contain;
+            object-position: center;
+        }
+
+        &__text {
+            margin: 20px 0;
+        }
+    }
+
+    &__form {
+        position: relative;
+
+        &__complete-message {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            max-height: 0;
+            opacity: 0;
+            visibility: hidden;
+            display: flex;
+            align-items: center;
+            color: #fff;
+            border: 1px solid #ccc;
+            padding: 20px;
+            z-index: 10;
+            transition: .4s ease;
+            -webkit-transition: .4s ease;
+            -moz-transition: .4s ease;
+            -ms-transition: .4s ease;
+            -o-transition: .4s ease;
+
+            &_visible {
+                max-height: 1200px;
+                opacity: 1;
+                visibility: visible;
+            }
+        }
+
+        &__controls {
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-row-gap: 16px;
+            transition: .4s ease;
+            -webkit-transition: .4s ease;
+            -moz-transition: .4s ease;
+            -ms-transition: .4s ease;
+            -o-transition: .4s ease;
+
+            .range_group {
+                @include resp($sbreak_md, 9999) {
+                    grid-column: 1/3;
+                }
+            }
+
+            .button {
+                margin-top: 24px;
+            }
+        }
+
+        &_complete {
+            .booking__form__controls {
+                opacity: 0;
+            }
+        }
+    }
+
+    @include resp($sbreak_lg, 9999) {
+        &__form {
+            &__controls {
+                grid-template-columns: repeat(3, 1fr);
+                grid-column-gap: 40px;
+                grid-row-gap: 16px;
+    
+                .range_group {
+                    grid-column: 1/3;
+                }
+    
+                .button {
+                    grid-column: 2/3;
+                }
+            }
+        }
+    }
+
+    @include resp($sbreak_sm, $sbreak_md_end) {
+        &__form {
+            &__controls {
+                grid-template-columns: repeat(2, 1fr);
+                grid-gap: 20px;
+                grid-auto-flow: dense;
+    
+                .range_group {
+                    grid-column: span 2;
+                }
+            }
+        }
+    }
+
+    @include resp(0, $sbreak_xs-end) {
+        padding: 40px 0;        
+
+        &__steps {
+            flex-direction: column;
+            align-items: center;
+            padding: 30px 0;
+        }
+
+        &__step {
+            & + .booking__step {
+                margin-top: 10px;
+
+                &::before {
+                    top: 0;
+                    transform: translate(-60%, -50px) rotate(90deg);
+                    -webkit-transform: translate(-60%, -50px) rotate(90deg);
+                    -moz-transform: translate(-60%, -50px) rotate(90deg);
+                    -ms-transform: translate(-60%, -50px) rotate(90deg);
+                    -o-transform: translate(-60%, -50px) rotate(90deg);
+                }
+            }
+        }
+    }
+}

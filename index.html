@@ -49,9 +49,99 @@
                         <li>Sed ut perspiciatis, unde omnis iste natus error</li>
                     </ul>
                 </div>
+                <div class="banner__actions">
+                    <a class="button">Заказать</a>
+                    <a class="button button_outline">Подробнее</a>
+                </div>
             </div>
         </div>
     </section>
+
+    <section class="booking">
+        <div class="booking__container container">
+            <h2 class="booking__title title-h2">
+                Оформление <span class="highlight">заказа</span>
+            </h2>
+            <p class="booking__subtitle">Перед заполнением формы ознакомьтесь с нашей схемой работы!</p>
+    
+            <ul class="booking__steps">
+                <li class="booking__step">
+                    <img src="/assets/img/icons/booking/booking-step1.svg" alt="" class="booking__step__icon" loading="lazy">
+                    <p class="booking__step__text">Lorem ipsum dolor sit amet</p>
+                </li>
+                <li class="booking__step">
+                    <img src="/assets/img/icons/booking/booking-step1.svg" alt="" class="booking__step__icon" loading="lazy">
+                    <p class="booking__step__text">Lorem ipsum dolor sit amet</p>
+                </li>
+                <li class="booking__step">
+                    <img src="/assets/img/icons/booking/booking-step1.svg" alt="" class="booking__step__icon" loading="lazy">
+                    <p class="booking__step__text">Lorem ipsum dolor sit amet</p>
+                </li>
+                <li class="booking__step">
+                    <img src="/assets/img/icons/booking/booking-step1.svg" alt="" class="booking__step__icon" loading="lazy">
+                    <p class="booking__step__text">Lorem ipsum dolor sit amet</p>
+                </li>
+                <li class="booking__step">
+                    <img src="/assets/img/icons/booking/booking-step1.svg" alt="" class="booking__step__icon" loading="lazy">
+                    <p class="booking__step__text">Lorem ipsum dolor sit amet</p>
+                </li>
+            </ul>
+
+            <form class="booking__form">
+                <div class="booking__form__controls">
+                    <div class="input__group">
+                        <div class="input input-select">
+                            <button class="input-select__btn">
+                                <span class="input-select__btn__text">Выберите тип системы</span> 
+                                <span class="arrow">
+                                    <svg class="arrow-icon" width="9" height="6" viewBox="0 0 9 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path class="arrow-icon__path" d="M8.93375 1.51079C8.93375 1.43936 8.89803 1.359 8.84446 1.30543L8.39803 0.859C8.34446 0.805429 8.2641 0.769714 8.19268 0.769714C8.12125 0.769714 8.04089 0.805429 7.98732 0.859L4.47839 4.36793L0.969462 0.859C0.91589 0.805429 0.835533 0.769714 0.764105 0.769714C0.683748 0.769714 0.612319 0.805429 0.558748 0.859L0.112319 1.30543C0.0587475 1.359 0.0230331 1.43936 0.0230331 1.51079C0.0230331 1.58221 0.0587475 1.66257 0.112319 1.71614L4.27303 5.87686C4.3266 5.93043 4.40696 5.96614 4.47839 5.96614C4.54982 5.96614 4.63018 5.93043 4.68375 5.87686L8.84446 1.71614C8.89803 1.66257 8.93375 1.58221 8.93375 1.51079Z" fill="black"/>
+                                    </svg>
+                                </span>
+                            </button>
+                            <ul class="dropdown-list">
+                                <li class="dropdown-list__item" data-value="Оценка дизайна">Оценка дизайна</li>
+                                <li class="dropdown-list__item" data-value="Linux">Linux</li>
+                                <li class="dropdown-list__item" data-value="Читаемая композиция">Читаемая композиция</li>
+                                <li class="dropdown-list__item" data-value="Lorem Ipsum">Lorem Ipsum</li>
+                                <li class="dropdown-list__item" data-value="Заполнение шаблона">Заполнение шаблона</li>
+                                <li class="dropdown-list__item" data-value="HTML-редакторы">HTML-редакторы</li>
+                                <li class="dropdown-list__item" data-value="IOS">IOS</li>
+                                <li class="dropdown-list__item" data-value="Android">Android</li>
+                            </ul>
+                        </div>
+                        <input class="input dropdown__input_hidden" type="hidden" name="system-type" pattern="^.+$">
+                        
+                        <span class="input__error">Тип системы не выбран</span>
+                    </div>
+                    <div class="input__group">
+                        <input class="input" type="text" name="e-mail" pattern="^\S+@\S+\.\S+$" placeholder="Ваш e-mail">
+                        <span class="input__error">Введите e-mail</span>
+                    </div>
+                    <div class="input__group">
+                        <input class="input" type="text" name="name" pattern="^\S+$" placeholder="Ваше имя">
+                        <span class="input__error">Введите имя</span>
+                    </div>
+                    <div class="input__group range_group">
+                        <label for="range" class="input-range__label">Sed ut perspiciatis <span class="input-range__value"></span></label>
+                        <input class="input-range" type="range" id="range" name="range" 
+                        min="0" max="100" value="75" step="1">
+                    </div>
+                    <div class="input__group">
+                        <label class="input input-file">
+                            <input type="file" name="file">
+                            <img src="/assets/img/icons/controls/file-icon.svg" alt="" loading="lazy">
+                            <span class="input-file__text">Прикрепить файл</span>
+                        </label>
+                    </div>
+                    <button class="button button_large" type="submit">Отправить</button>
+                </div>
+
+                <div class="booking__form__complete-message"></div>
+            </form>
+        </div>
+    </section>
+
     <footer class="footer">
         <div class="footer__container container">
             <div class="footer__sources__wrapper">
@@ -87,5 +177,4 @@
     </footer>
     <script src="./assets/js/main.min.js"></script>
 </body>
-
 </html>

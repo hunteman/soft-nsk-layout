@@ -5,6 +5,7 @@ const sass = require('gulp-sass')(require('sass'));
 const browserSync = require('browser-sync').create();
 const rename = require('gulp-rename');
 const uglify = require('gulp-uglify-es').default;
+const ghPages = require('gulp-gh-pages');
 
 
 function buildStyles() {
@@ -47,3 +48,8 @@ function watch(cb) {
 exports.buildStyles = buildStyles;
 exports.buildScripts = buildScripts;
 exports.default = watch;
+
+gulp.task('deploy', function() {
+  return gulp.src('./assets/**/*')
+    .pipe(ghPages());
+});

@@ -4,8 +4,8 @@ function setActiveLink() {
     const navItems = document.querySelectorAll('.header__nav-item');
     if(navItems) {
         navItems.forEach(navItem => {
-            const path = navItem.getAttribute('href');
-            path && path === window.location.pathname && navItem.classList.toggle('active');
+            const path = navItem.href;
+            path && path === window.location.href && navItem.classList.toggle('active');
         });
     }
 }
@@ -101,7 +101,7 @@ function formValidate() {
             form.classList.add('booking__form_complete');
             completeMessageWrapper.innerHTML = `<p>${form["name"].value} ваш заказ №${Date.now()} успешно оформлен. <br>Наш специалист свяжется с вами в ближайшее время.</p>`;
             completeMessageWrapper.classList.add('booking__form__complete-message_visible');
-            requiredControls.forEach((c) => {
+            document.querySelectorAll('.booking__form input').forEach((c) => {
                 c.classList.remove('invalid');
                 formData.append(c.name, c.value);
             });

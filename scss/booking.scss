@@ -1,5 +1,5 @@
 .booking {
-    background: #272733 url('/assets/img/icons/booking/booking-bg.jpg') center no-repeat;
+    background: #272733 url('../img/icons/booking/booking-bg.jpg') center no-repeat;
     background-size: cover;
     padding: 90px 0;
 
@@ -29,7 +29,7 @@
 
         & + .booking__step {
             &::before {
-                content: url('/assets/img/icons/booking/booking-line.svg');
+                content: url('../img/icons/booking/booking-line.svg');
                 position: absolute;
                 top: 46px;
                 left: 0;

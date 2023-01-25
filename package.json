@@ -22,6 +22,7 @@
   },
   "devDependencies": {
     "browser-sync": "^2.27.11",
+    "gulp-gh-pages": "^0.5.4",
     "gulp-sass": "^5.1.0",
     "gulp-uglify-es": "^3.0.0",
     "sass": "^1.57.1"
